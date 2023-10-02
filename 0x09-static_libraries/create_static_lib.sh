@@ -1,6 +1,2 @@
 #!/bin/bash
-for file in *.c; do
-    gcc -c "$file"
-done
-ar rcs liball.a *.o
-rm -f *.o
+gcc -Wall -pedantic -Werror -Wextra -c *.c && ar -rc liball.a *.o && ranlib liball.a
